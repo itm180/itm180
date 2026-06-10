@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>داخل العقل - اكتشف أسرار العلاقات والجاذبية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&family=Cairo:wght@700;900&display=swap" rel="stylesheet">
+<link rel="preload" href="images/book-karizma.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="images/book-99.jpg" as="image" fetchpriority="high">
+<link rel="preload" href="images/book-asrar.jpg" as="image" fetchpriority="high">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div style="text-align:center;position:relative;">
+    <div style="position:relative;z-index:10;">
+      <h1 style="font-family:'Cairo',sans-serif;font-size:3rem;font-weight:900;color:white;margin-bottom:1rem;">داخل <span class="text-gradient">العقل</span></h1>
+      <div style="height:2px;margin:0 auto;border-radius:2px;background:linear-gradient(90deg,transparent,#D4AF37,#8B0000,transparent);width:120px;animation:loading-grow 0.8s ease-in-out forwards;"></div>
+    </div>
+    <div style="position:absolute;inset:0;filter:blur(3rem);opacity:0.2;background:radial-gradient(circle at center,#8B0000 0%,transparent 70%);"></div>
+  </div>
+</div>
+
+<!-- Cursor Effects -->
+<div id="cursor-main"></div>
+<div id="cursor-trail"></div>
+
+<!-- Smoke Canvas -->
+<canvas id="smoke-canvas"></canvas>
+
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <div class="hero-badge">✦ المشروع النفسي الأكثر جرأة</div>
+        <h1 class="hero-title">داخل <span class="text-gradient">العقل</span></h1>
+        <p class="hero-desc">اكتشف أسرار العلاقات، الجاذبية، والتحكم العاطفي التي لا يخبرك بها أحد.</p>
+        <div class="hero-btns">
+          <a href="https://alfan.link/qas425" target="_blank" class="btn-primary">احصل على الكتب الآن</a>
+          <a href="#about" class="btn-ghost">ابدأ رحلتك</a>
+        </div>
+      </div>
+      <div class="hero-books" id="hero-books-desktop">
+        <div class="hero-books-wrapper">
+          <a href="books/karizma-jathb-alnisa.html" class="hero-book-link" style="bottom:0;left:0;z-index:1;transform:rotate(-6deg);">
+            <div class="hero-book" style="box-shadow:0 20px 60px #8B000040;"><img fetchpriority="high" src="images/book-karizma.jpg" alt="كاريزما جذب النساء"><div class="hero-book-overlay"></div><div class="hero-book-line"></div></div>
+          </a>
+          <a href="books/asarar-alalakat.html" class="hero-book-link" style="top:10px;left:70px;z-index:3;transform:rotate(1deg);">
+            <div class="hero-book hero-book-featured" style="box-shadow:0 0 40px rgba(212,175,55,0.3),0 20px 60px #D4AF3740;"><img fetchpriority="high" src="images/book-asrar.jpg" alt="أسرار العلاقات السرية"><div class="hero-book-overlay"></div><div class="hero-book-line"></div><div class="hero-book-glow-ring"></div></div>
+          </a>
+          <a href="books/99-qaeda.html" class="hero-book-link" style="top:50px;left:140px;z-index:2;transform:rotate(6deg);">
+            <div class="hero-book" style="box-shadow:0 20px 60px #1A000040;"><img fetchpriority="high" src="images/book-99.jpg" alt="99 قاعدة للسيطرة"><div class="hero-book-overlay"></div><div class="hero-book-line"></div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-mobile-books">
+      <a href="books/karizma-jathb-alnisa.html"><img fetchpriority="high" src="images/book-karizma.jpg" alt=""></a>
+      <a href="books/asarar-alalakat.html" class="mobile-featured"><img fetchpriority="high" src="images/book-asrar.jpg" alt="" style="box-shadow:0 0 20px rgba(212,175,55,0.3);border:2px solid rgba(212,175,55,0.3);border-radius:0.5rem;"></a>
+      <a href="books/99-qaeda.html"><img fetchpriority="high" src="images/book-99.jpg" alt=""></a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><div class="scroll-mouse"><div class="scroll-dot"></div></div></div>
+  <div id="hero-particles"></div>
+</section>
+
+<!-- Offer Section (3-book bundle) -->
+<section class="section" style="background:#050505;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 40%,rgba(139,0,0,0.1) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <div class="offer-badge">✦ عرض خاص</div>
+      <h2 class="section-title">احصل على <span class="text-gradient">الكتب الثلاثة</span></h2>
+      <p class="section-desc">مجموعة متكاملة لفهم أسرار العلاقات والجاذبية والتحكم العاطفي</p>
+      <div class="pricing">
+        <span class="old-price">$55</span>
+        <span class="new-price">$35</span>
+      </div>
+    </div>
+    <div class="offer-books">
+      <div style="animation:float-hover 4s ease-in-out infinite;"><img loading="lazy" src="images/book-karizma.jpg" alt=""></div>
+      <div style="animation:float-hover 3.5s ease-in-out infinite;animation-delay:0.3s;"><img loading="lazy" src="images/book-99.jpg" alt=""></div>
+      <div style="animation:float-hover 5s ease-in-out infinite;animation-delay:0.6s;"><img loading="lazy" src="images/book-asrar.jpg" alt=""></div>
+    </div>
+    <div id="offer-3-timer" class="scroll-hidden"></div>
+    <div class="scroll-hidden" style="text-align:center;margin-top:1.5rem;">
+      <a href="https://alfan.link/qas425?digital=KgKpLn" target="_blank" class="btn-primary" style="display:inline-block;">اشتري الحزمة الآن</a>
+      <p class="guarantee-note">ضمان استرداد الأموال لمدة 48 ساعة</p>
+    </div>
+  </div>
+</section>
+
+<!-- Bundle Offer Section (2-book bundle) -->
+<section class="section" style="background:#050505;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 40%,rgba(139,0,0,0.08) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <div class="offer-badge">✦ عرض محدود</div>
+      <h2 class="section-title">حزمة <span class="text-gradient">الكاريزما والجاذبية</span></h2>
+      <p class="section-desc">كتابان يجمعان بين قوة الكاريزما وفهم السيطرة في العلاقة</p>
+      <div class="pricing">
+        <span class="old-price">$30</span>
+        <span class="new-price">$19</span>
+      </div>
+    </div>
+    <div class="offer-books books-2" style="gap:1.5rem;">
+      <div style="animation:float-hover 4s ease-in-out infinite;"><img loading="lazy" src="images/book-karizma.jpg" alt=""></div>
+      <div style="animation:float-hover 5s ease-in-out infinite;animation-delay:0.4s;"><img loading="lazy" src="images/book-99.jpg" alt=""></div>
+    </div>
+    <div id="offer-2-timer" class="scroll-hidden"></div>
+    <div class="scroll-hidden" style="text-align:center;margin-top:1.5rem;">
+      <a href="https://alfan.link/qas425?digital=rrhQJ8" target="_blank" class="btn-primary" style="display:inline-block;">اشتري الحزمة الآن</a>
+      <p class="guarantee-note">ضمان استرداد الأموال لمدة 48 ساعة</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section" id="about" style="background:#050505;">
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title"><span class="text-gradient">من نحن</span></h2>
+      <div class="divider"></div>
+    </div>
+    <p class="about-text scroll-hidden">داخل العقل هو مشروع نفسي متخصص في كشف أسرار العلاقات العاطفية، الجاذبية، وفهم النفس البشرية بأسلوب عميق وحديث يساعد الشباب على فهم العلاقات بطريقة مختلفة تمامًا.</p>
+    <div class="grid-3" style="gap:1rem;margin-top:2rem;">
+      <div class="glass-card scroll-hidden">
+        <div class="glass-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3 class="glass-title">تحليل نفسي عميق</h3>
+        <p class="glass-desc">نقدم تحليلاً نفسياً متعمقاً للعلاقات الإنسانية من منظور حديث</p>
+      </div>
+      <div class="glass-card scroll-hidden">
+        <div class="glass-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3 class="glass-title">فهم المشاعر</h3>
+        <p class="glass-desc">نساعدك على فهم مشاعرك ومشاعر الآخرين بشكل أفضل</p>
+      </div>
+      <div class="glass-card scroll-hidden">
+        <div class="glass-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="glass-title">رؤية جديدة</h3>
+        <p class="glass-desc">نمنحك نظرة مختلفة تماماً للعلاقات لم تسمع بها من قبل</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Books Section -->
+<section class="section" id="books" style="background:#080808;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 50%,rgba(139,0,0,0.08) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title">اختر <span class="text-gradient">كتابك</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">كل كتاب يكشف جانباً مختلفاً من أسرار العلاقات والجاذبية</p>
+    </div>
+    <div class="grid-3" style="gap:1rem;margin-top:2rem;">
+      <div class="book-card featured scroll-hidden" onclick="location.href='books/asarar-alalakat.html'">
+        <div class="book-badge">★ الأكثر طلباً</div>
+        <div class="book-card-float" style="box-shadow:0 20px 60px #D4AF3740;"><img loading="lazy" src="images/book-asrar.jpg" alt="أسرار العلاقات السرية"></div>
+        <h3 class="book-card-title">أسرار العلاقات السرية</h3>
+        <p class="book-card-desc">ما لم يخبرك به أحد عن الحب، التعلق، والانجذاب العاطفي.</p>
+        <div class="book-card-price"><span class="old-price">$39</span><span class="new-price">$25</span></div>
+        <a href="https://alfan.link/qas425?digital=9zjD9w" target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;" onclick="event.stopPropagation()">اشترِ الآن</a>
+      </div>
+      <div class="book-card scroll-hidden" onclick="location.href='books/karizma-jathb-alnisa.html'">
+        <div class="book-card-float" style="box-shadow:0 20px 60px #8B000040;"><img loading="lazy" src="images/book-karizma.jpg" alt="كاريزما جذب النساء"></div>
+        <h3 class="book-card-title">كاريزما جذب النساء</h3>
+        <p class="book-card-desc">الدليل النفسي لبناء شخصية جذابة تجعل الآخرين يشعرون بقيمتك دون تصنع.</p>
+        <div class="book-card-price"><span class="old-price">$29</span><span class="new-price">$15</span></div>
+        <a href="https://alfan.link/qas425?digital=PrJD86" target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;" onclick="event.stopPropagation()">اشترِ الآن</a>
+      </div>
+      <div class="book-card scroll-hidden" onclick="location.href='books/99-qaeda.html'">
+        <div class="book-card-float" style="box-shadow:0 20px 60px #1A000040;"><img loading="lazy" src="images/book-99.jpg" alt="99 قاعدة للسيطرة"></div>
+        <h3 class="book-card-title">99 قاعدة للسيطرة في العلاقة</h3>
+        <p class="book-card-desc">قواعد نفسية لفهم التوازن والقوة داخل العلاقات بدون ضعف أو تعلق.</p>
+        <div class="book-card-price"><span class="old-price">$25</span><span class="new-price">$15</span></div>
+        <a href="https://alfan.link/qas425?digital=nzRbPn" target="_blank" class="btn-primary" style="display:block;width:100%;text-align:center;" onclick="event.stopPropagation()">اشترِ الآن</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Gallery -->
+<section class="section" style="background:#050505;">
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title">تجارب <span class="text-gradient">عملائنا</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div id="gallery" style="position:relative;padding:0 3rem;">
+      <div id="gallery-slide" style="display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
+        <div style="width:calc(50% - 6px);max-width:160px;aspect-ratio:1;border-radius:0.75rem;overflow:hidden;border:2px solid rgba(212,175,55,0.15);"><img src="images/customers/ahmed.jpg" alt="صورة عميل" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        <div style="width:calc(50% - 6px);max-width:160px;aspect-ratio:1;border-radius:0.75rem;overflow:hidden;border:2px solid rgba(212,175,55,0.15);"><img src="images/customers/sara.jpg" alt="صورة عميل" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+      </div>
+      <button class="gallery-btn" id="gallery-next">‹</button>
+      <button class="gallery-btn" id="gallery-prev">›</button>
+    </div>
+    <div id="gallery-dots" style="display:flex;justify-content:center;gap:0.5rem;margin-top:1.5rem;"></div>
+  </div>
+</section>
+
+<!-- Learn Section -->
+<section class="section" style="background:#050505;">
+  <div style="position:absolute;top:50%;right:0;width:40%;height:80%;border-radius:50%;filter:blur(120px);opacity:0.04;pointer-events:none;background:radial-gradient(circle,#8B0000,transparent);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title"><span class="text-gradient">ماذا ستتعلم؟</span></h2>
+      <div class="divider"></div>
+      <p class="section-desc">اكتسب مهارات نفسية عميقة ستغير نظرتك للعلاقات</p>
+    </div>
+    <div class="grid-4" style="gap:0.75rem;">
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><span>كيف تصبح أكثر جاذبية</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span>كيف تتخلص من التعلق</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>كيف تفهم المرأة</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span>كيف تتعامل مع التجاهل</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>كيف تبني علاقة قوية</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><span>أسرار الجاذبية النفسية</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><span>الثقة بالنفس داخل العلاقات</span></div>
+      <div class="skill-card scroll-hidden"><div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><span>التعامل مع الرفض والانفصال</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points Section -->
+<section class="section" style="background:#080808;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 50%,rgba(139,0,0,0.1) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title">هل تعاني من <span class="text-gradient-red">هذه المشاكل؟</span></h2>
+      <div class="divider" style="background:rgba(139,0,0,0.5);"></div>
+    </div>
+    <div class="grid-3 pain-grid" style="gap:0.75rem;">
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span>التعلق الزائد</span></div>
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><span>الخوف من الفقدان</span></div>
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="18" y1="8" x2="23" y2="13"/><line x1="23" y1="8" x2="18" y2="13"/></svg></div><span>التجاهل والبرود</span></div>
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><span>ضعف الثقة بالنفس</span></div>
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>العلاقات السامة</span></div>
+      <div class="pain-card scroll-hidden"><div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#8B0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><span>التفكير الزائد</span></div>
+    </div>
+    <p class="scroll-hidden" style="color:rgba(255,255,255,0.6);margin-top:2rem;">لست وحدك. هذه المشاكل لها حلول نفسية عملية ستتعرف عليها داخل الكتب.</p>
+  </div>
+</section>
+
+<!-- Results Section -->
+<section class="section" style="background:#080808;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 0%,rgba(212,175,55,0.05) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title">ماذا سيتغير بعد <span class="text-gradient">قراءة الكتب؟</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="grid-2 results-grid" style="gap:0.75rem;">
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span>ستفهم العلاقات بطريقة أعمق</span></div>
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span>ستصبح أكثر هدوءًا وثقة</span></div>
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>ستتوقف عن التعلق المرضي</span></div>
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><span>ستفهم الجاذبية النفسية</span></div>
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div><span>ستتعلم بناء علاقة صحية</span></div>
+      <div class="result-card scroll-hidden"><div class="result-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>ستتعامل مع الرفض والانفصال بقوة</span></div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card scroll-hidden"><div class="stat-num" data-target="15000">0+</div><p>قارئ استفاد</p></div>
+      <div class="stat-card scroll-hidden"><div class="stat-num" data-target="97">0%</div><p>تقييم إيجابي</p></div>
+      <div class="stat-card scroll-hidden"><div class="stat-num" data-target="48">0</div><p>ساعة للاسترداد</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Different Section -->
+<section class="section" style="background:#050505;">
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#8B0000,#D4AF37,transparent);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title">لماذا <span class="text-gradient">داخل العقل</span> مختلف؟</h2>
+      <div class="divider"></div>
+      <p class="section-desc">ليس مجرد محتوى عابر… بل منهج نفسي متكامل</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item scroll-hidden">
+        <div class="why-icon" style="background:rgba(139,0,0,0.12);border-color:rgba(139,0,0,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <div class="why-text"><h4>تحليل نفسي عميق</h4><p>ليس مجرد كلام سطحي، بل تحليل نفسي حقيقي لفهم أسباب المشاكل</p></div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item scroll-hidden">
+        <div class="why-icon" style="background:rgba(139,0,0,0.12);border-color:rgba(139,0,0,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div class="why-text"><h4>أمثلة واقعية</h4><p>نقدم أمثلة من الحياة الواقعية وليس نظريات أكاديمية جافة</p></div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item scroll-hidden">
+        <div class="why-icon" style="background:rgba(139,0,0,0.12);border-color:rgba(139,0,0,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <div class="why-text"><h4>محتوى عربي حديث</h4><p>محتوى مكتوب بلغة عربية معاصرة تناسب الشباب العربي</p></div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item scroll-hidden">
+        <div class="why-icon" style="background:rgba(139,0,0,0.12);border-color:rgba(139,0,0,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <div class="why-text"><h4>أسلوب عملي</h4><p>خطوات عملية قابلة للتطبيق مباشرة في حياتك اليومية</p></div>
+      </div>
+      <div class="why-connector"></div>
+      <div class="why-item scroll-hidden">
+        <div class="why-icon" style="background:rgba(212,175,55,0.12);border-color:rgba(212,175,55,0.2);"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="why-text"><h4>فهم حقيقي للعلاقات</h4><p>نفهم ثقافتك وتحدياتك ولذلك صممنا المحتوى خصيصًا لك</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee Section -->
+<section class="section" style="background:#050505;">
+  <div class="section-glow" style="background:radial-gradient(ellipse at 50% 50%,rgba(212,175,55,0.04) 0%,transparent 70%);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="guarantee-card scroll-hidden">
+      <div class="shield-icon" id="shield-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <h3 class="text-gradient" style="font-family:'Cairo',sans-serif;font-size:1.25rem;font-weight:900;margin-bottom:0.75rem;">ضمان استرداد الأموال</h3>
+      <p style="color:rgba(255,255,255,0.6);font-size:0.875rem;line-height:1.7;margin-bottom:1rem;">إذا لم تجد فائدة حقيقية من الكتب، يمكنك استرجاع أموالك كاملة خلال <strong style="color:#D4AF37;">48 ساعة</strong>.</p>
+      <div class="divider" style="margin:0 auto;width:48px;"></div>
+      <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:0.75rem;">لا مخاطرة. جرب الكتب الآن بكل ثقة.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section" id="faq" style="background:#0A0A0A;">
+  <div style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#8B0000,transparent);"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title"><span class="text-gradient">أسئلة شائعة</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>هل الكتب PDF؟</span>
+          <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer"><p>نعم، جميع الكتب متوفرة بصيغة PDF عالية الجودة يمكنك قراءتها على أي جهاز.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>هل أستطيع قراءتها من الهاتف؟</span>
+          <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer"><p>بالتأكيد. الكتب مصممة خصيصًا لتكون متوافقة مع جميع أحجام الشاشات بما فيها الهواتف الذكية.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>هل تناسب المبتدئين؟</span>
+          <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer"><p>نعم، الكتب مكتوبة بأسلوب بسيط وعملي يناسب الجميع بغض النظر عن خلفيتهم المعرفية.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>كيف يصلني الكتاب بعد الشراء؟</span>
+          <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer"><p>بعد إتمام عملية الشراء، سيصلك رابط التحميل مباشرة على بريدك الإلكتروني.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>هل تحتوي أمثلة واقعية؟</span>
+          <svg class="faq-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="faq-answer"><p>نعم، كل كتاب يحتوي على أمثلة واقعية وتطبيقات عملية يمكنك استخدامها في حياتك اليومية.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section class="section" style="min-height:60vh;display:flex;align-items:center;background:#050505;">
+  <div class="final-cta-glow"></div>
+  <div class="final-cta-spot top-left"></div>
+  <div class="final-cta-spot bottom-right"></div>
+  <div class="container" style="text-align:center;">
+    <div class="scroll-hidden">
+      <h2 class="section-title" style="font-size:1.75rem;">ابدأ رحلتك لفهم العلاقات <span class="text-gradient">بطريقة مختلفة</span></h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:2rem;">غيّر طريقة تفكيرك، شخصيتك، وعلاقاتك من الداخل.</p>
+      <a href="https://alfan.link/qas425" target="_blank" class="btn-primary" style="display:inline-block;padding:1rem 2.5rem;font-size:1.125rem;">احصل على الكتب الآن</a>
+      <p style="color:rgba(255,255,255,0.3);font-size:0.75rem;margin-top:1.5rem;">ضمان استرداد الأموال لمدة 30 يومًا</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-line"></div>
+  <div class="container" style="text-align:center;">
+    <div class="footer-brand">
+      <h3 class="text-gradient" style="font-family:'Cairo',sans-serif;font-size:1.5rem;font-weight:900;">داخل العقل</h3>
+      <p style="color:rgba(255,255,255,0.4);font-size:0.8125rem;">اكتشف أسرار العلاقات والجاذبية</p>
+    </div>
+    <div class="footer-social">
+      <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.instagram.com/itm.180" target="_blank" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+      <a href="https://www.tiktok.com/@itm.180" target="_blank" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+      <a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+    </div>
+    <div><a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;" class="scroll-top">العودة للأعلى <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></a></div>
+    <div class="footer-copy">© 2026 داخل العقل. جميع الحقوق محفوظة.</div>
+  </div>
+</footer>
+
+<!-- Floating Buy Button -->
+<a href="https://alfan.link/qas425" target="_blank" class="floating-btn">اشتري الكتب الآن</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

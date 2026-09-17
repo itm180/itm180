@@ -1,116 +1,3 @@
-/* =========================================
-   Free Sample Box (Glassmorphism Style)
-   ========================================= */
-.free-sample-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  background: rgba(255, 255, 255, 0.03); /* شفافية زجاجية */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.2); /* إطار ذهبي خفيف */
-  border-radius: 20px;
-  padding: 2rem;
-  max-width: 800px;
-  margin: 3rem auto 0;
-  text-align: right;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  position: relative;
-  overflow: hidden;
-}
-
-/* الإضاءة الخلفية الحمراء الخفيفة داخل الصندوق */
-.free-sample-box::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at bottom right, rgba(139, 0, 0, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.sample-image-wrapper {
-  flex: 0 0 120px;
-  position: relative;
-  z-index: 1;
-}
-
-.sample-image-wrapper img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  transform: rotate(-5deg); /* ميلان بسيط يعطي جمالية */
-  transition: transform 0.3s ease;
-}
-
-.free-sample-box:hover .sample-image-wrapper img {
-  transform: rotate(0deg) scale(1.05);
-}
-
-/* توهج خلف صورة الكتاب المجاني */
-.sample-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background: rgba(212, 175, 55, 0.3);
-  filter: blur(25px);
-  z-index: -1;
-}
-
-.sample-content {
-  flex: 1;
-  z-index: 1;
-}
-
-/* زر التحميل المجاني (تصميم مختلف عن زر الشراء حتى لا يسرق الانتباه) */
-.btn-outline {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: transparent;
-  color: #D4AF37; /* لون ذهبي */
-  border: 1px solid #D4AF37;
-  border-radius: 8px;
-  font-family: 'Tajawal', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: rgba(212, 175, 55, 0.1);
-  color: #fff;
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-  transform: translateY(-2px);
-}
-
-/* التجاوب مع شاشات الجوال */
-@media (max-width: 768px) {
-  .free-sample-box {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-  
-  .sample-image-wrapper {
-    flex: 0 0 150px;
-    width: 150px;
-  }
-  
-  .sample-image-wrapper img {
-    transform: rotate(0deg);
-  }
-}
-
 :root {
   --deep-black: #050505;
   --dark-red: #8B0000;
@@ -713,6 +600,51 @@ body {
 /* Responsive */
 @media (max-width: 1024px) {
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Preview Page Styles */
+.btn-preview {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--gold);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.btn-preview:hover {
+  background: rgba(139,0,0,0.2);
+  border-color: var(--dark-red);
+  box-shadow: 0 0 20px rgba(212,175,55,0.2);
+}
+.preview-book-section {
+  padding: 4rem 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+.preview-cover-small {
+  width: 140px;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.pages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.page-placeholder {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #111;
 }
 
 @media (max-width: 768px) {
